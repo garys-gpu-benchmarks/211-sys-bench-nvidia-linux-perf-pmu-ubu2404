@@ -11,9 +11,9 @@ Reference results from the validation run on the system shown in each section (r
 ## smoke
 
 - **System:** 1× NVIDIA H100 80GB HBM3 (81559 MiB) · Intel(R) Xeon(R) Platinum 8470 · Ubuntu 24.04.5 LTS · kernel 6.8.0-149-generic · driver 595.112.07
-- **Run:** 2026-11-22T10:52:28Z · status **N/A-EXPECTED** (exit 0)
-- **Time (mm:ss):** setup 00:31 · benchmark 00:05 · whole run 00:42
-- **Source:** run 211_20261122_105228
+- **Run:** 2026-11-22T14:16:53Z · status **N/A-EXPECTED** (exit 0)
+- **Time (mm:ss):** setup 00:57 · benchmark 00:05 · whole run 01:07
+- **Source:** run 211_20261122_141653
 - **Command:** `bash run_benchmark.sh --smoke --num-cpus 1 --workload-commands "stress-ng --cpu {num_cpus} --timeout {duration}s --metrics-brief,stress-ng --cache {num_cpus} --timeout {duration}s --metrics-brief" --event-list cycles,cpu-cycles,instructions,branches,branch-misses,cache-references,cache-misses,L1-dcache-loads,L1-dcache-load-misses,LLC-loads,LLC-load-misses,dTLB-load-misses,iTLB-load-misses,stalled-cycles-frontend,stalled-cycles-backend,context-switches --duration 2`
 
 | # | Metric | Result |
@@ -22,5 +22,5 @@ Reference results from the validation run on the system shown in each section (r
 | 2 | Branch misprediction rate, all commands combined, pct (branch_misprediction_rate) | na (expected: PMU access denied, perf_event_paranoid=4) |
 | 3 | Cache misses per 1,000 instructions, all commands combined (cache_misses_per_1000_instructions) | na (expected: PMU access denied, perf_event_paranoid=4) |
 | 4 | Pipeline stalls, all commands combined, pct (pipeline_stall_pct) | na (expected: PMU access denied, perf_event_paranoid=4) |
-| 5 | Context switches per second, all commands combined (context_switches_during_workload_switches_s) | 24.383691123361082 |
+| 5 | Context switches per second, all commands combined (context_switches_during_workload_switches_s) | 28.37867528787173 |
 <!-- /profile:smoke -->
